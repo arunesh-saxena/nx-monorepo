@@ -17,7 +17,7 @@
     "paths": {
       "products/Module": ["apps/products/src/remote-entry.ts"],
       "orders/Module": ["apps/orders/src/remote-entry.ts"],
-      "@nx-kavi2/shared-ui": ["libs/shared-ui/src/index.ts"]
+      "@nx-repo/shared-ui": ["libs/shared-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

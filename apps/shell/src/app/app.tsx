@@ -1,7 +1,7 @@
 import * as React from 'react';
 import NxWelcome from './nx-welcome';
 import { Link, Route, Routes } from 'react-router-dom';
-import { Button } from '@nx-kavi2/shared-ui';
+import { Button } from '@nx-repo/shared-ui';
 
 const Orders = React.lazy(() => import('orders/Module'));
 
@@ -21,7 +21,7 @@ export function App() {
           <Link to="/products">Products</Link>
         </li>
       </ul>
-      <Button label="Click Me" onClick={() => console.log('Button clicked! Shell')} />
+      <Button label="Click Me shell" onClick={() => console.log('Button clicked! Shell')} />
       <Routes>
         <Route path="/" element={<NxWelcome title="shell" />} />
         <Route path="/orders" element={<Orders />} />

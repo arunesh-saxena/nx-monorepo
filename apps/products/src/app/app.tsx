@@ -2,7 +2,7 @@
 // import styles from './app.module.css';
 import NxWelcome from './nx-welcome';
 
-import { Button } from '@nx-kavi2/shared-ui';
+import { Button } from '@nx-repo/shared-ui';
 export function App() {
   return (
     <div>
