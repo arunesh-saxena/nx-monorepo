@@ -1,11 +1,12 @@
 import * as React from 'react';
 import NxWelcome from './nx-welcome';
 import { Link, Route, Routes } from 'react-router-dom';
+import { Button } from '@nx-kavi2/shared-ui';
 
 const Orders = React.lazy(() => import('orders/Module'));
 
 const Products = React.lazy(() => import('products/Module'));
-import { Button } from '@nx-kavi2/shared-ui';
+
 export function App() {
   return (
     <React.Suspense fallback={null}>
