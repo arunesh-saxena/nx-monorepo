@@ -5,7 +5,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 const Orders = React.lazy(() => import('orders/Module'));
 
 const Products = React.lazy(() => import('products/Module'));
-
+import { Button } from '@nx-kavi2/shared-ui';
 export function App() {
   return (
     <React.Suspense fallback={null}>
@@ -20,6 +20,7 @@ export function App() {
           <Link to="/products">Products</Link>
         </li>
       </ul>
+      <Button label="Click Me" onClick={() => console.log('Button clicked! Shell')} />
       <Routes>
         <Route path="/" element={<NxWelcome title="shell" />} />
         <Route path="/orders" element={<Orders />} />
