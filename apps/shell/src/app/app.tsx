@@ -5,6 +5,8 @@ import { Button } from '@nx-repo/shared-ui';
 import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement } from './counter/counter.slice';
 
+import { cartEventBus } from '@nx-repo/cart-events';
+
 const Cart = React.lazy(() => import('cart/Module'));
 const Orders = React.lazy(() => import('orders/Module'));
 
@@ -33,8 +35,22 @@ export function App() {
         label="Click Me shell"
         onClick={() => console.log('Button clicked! Shell')}
       />
-      <button onClick={() => dispatch(increment())}>increment +</button> value:{' '}
-      {value} <button onClick={() => dispatch(decrement())}>decrement -</button>
+      <br />
+      <button onClick={() => dispatch(decrement())}>
+        decrement -
+      </button>value:{' '}
+      <button onClick={() => dispatch(increment())}>increment +</button>
+      <br />
+      <button
+        onClick={() =>
+          cartEventBus.emit({
+            type: 'ADD_ITEM',
+            payload: { id: `${Date.now()}`, name: 'iPhone', qty: 1 },
+          })
+        }
+      >
+        Add to Cart | example of Simple Event Bus
+      </button>
       <Routes>
         <Route path="/" element={<NxWelcome title="shell" />} />
         <Route path="/cart" element={<Cart />} />
