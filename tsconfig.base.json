@@ -17,7 +17,8 @@
     "paths": {
       "products/Module": ["apps/products/src/remote-entry.ts"],
       "orders/Module": ["apps/orders/src/remote-entry.ts"],
-      "@nx-repo/shared-ui": ["libs/shared-ui/src/index.ts"]
+      "@nx-repo/shared-ui": ["libs/shared-ui/src/index.ts"],
+      "cart/Module": ["apps/cart/src/remote-entry.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
